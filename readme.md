@@ -44,6 +44,13 @@ To find information about a certain team: **GET /v1/teams/_teamId_**.
 
 To find all players in one team: **GET /v1/teams/players**.
 
+For uploading media files, e.g. images: **POST /v1/media** as formData with the image file added as value for the key: **mediaFile**. Additional metadata can be added via adding a JSON in the body wit a key **metdata**:
+```javascript
+{
+  "metadata": "This is the logo of Liverpool FC"
+}
+```
+
 ### Swagger
 This project uses Swagger to automatically generates a documentation based on code comments. The Swagger documentation can be accessed via: **/api-docs**. In the relevant controllers, you can find examples of code comments. More information about Swagger can be found here: [Swagger](https://swagger.io/).
 
