@@ -4,6 +4,8 @@ const User = require('./models/user');
 const config = require('./config');
 const FacebookStrategy = require('passport-facebook').Strategy;
 
+passport.use(User.createStrategy());
+
 /*passport.use(new LocalStrategy(
   {session: false},
   function(username, password, done) {
@@ -18,9 +20,9 @@ const FacebookStrategy = require('passport-facebook').Strategy;
   }
 ));*/
 
-passport.use(User.createStrategy());
 
-exports.facebook = passport.use(new FacebookStrategy({
+
+/*exports.facebook = passport.use(new FacebookStrategy({
     clientID: config.passport.facebook.clientID,
     clientSecret: config.passport.facebook.clientSecret,
     callbackURL: config.passport.facebook.callbackURL
@@ -49,4 +51,4 @@ exports.facebook = passport.use(new FacebookStrategy({
       }
     });
   }
-));
+));*/

@@ -16,7 +16,7 @@ const config = require('../config');
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '3443');
+const port = normalizePort(process.env.PORT || config.port);
 app.set('port', port);
 
 /**

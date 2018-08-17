@@ -1,7 +1,9 @@
 const fs = require('fs');
 
-const _host = 'localhost:3443';
+const port = 3443;
+const _host = 'localhost:'+port;
 //exports.host = _host;
+exports.port = port;
 exports.url = "https://" + _host;
 
 //if user and password is required uncomment the relevant sections
@@ -20,7 +22,6 @@ dbUrl += '/' + db.db;
 
 exports.db = {
   db: db,
-  secret: 'iamasecret',
   url: dbUrl
 };
 
